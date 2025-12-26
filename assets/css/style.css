@@ -1,0 +1,11 @@
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Arial}
+body{background:#0f172a;color:#e5e7eb;line-height:1.7}
+a{color:#f97316;text-decoration:none}
+header{background:#020617;padding:20px 60px;display:flex;justify-content:space-between}
+header h1{color:#38bdf8}
+nav a{margin-left:20px}
+.container{max-width:900px;margin:60px auto;padding:0 20px}
+.card{background:rgba(255,255,255,0.05);padding:30px;border-radius:14px;margin-bottom:30px}
+pre{background:#020617;padding:15px;border-radius:10px;overflow-x:auto}
+footer{text-align:center;padding:40px;color:#94a3b8}

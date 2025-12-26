@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile - YenNhiBlog</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Segoe UI',sans-serif;
+  background:linear-gradient(135deg,#667eea,#764ba2);
+  color:#fff;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+/* ===== HEADER ===== */
+header{
+  background:rgba(255,255,255,.1);
+  padding:1.5rem 0;
+  backdrop-filter:blur(10px);
+}
+nav{
+  max-width:1200px;
+  margin:auto;
+  padding:0 2rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{
+  font-size:1.6rem;
+  font-weight:bold;
+}
+.nav-links{
+  list-style:none;
+  display:flex;
+  gap:2rem;
+}
+.nav-links a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:500;
+}
+
+/* ===== CONTAINER ===== */
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:3rem 2rem;
+  flex:1;
+  text-align:center;
+}
+
+/* ===== AVATAR ===== */
+.avatar{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  overflow:hidden;
+  margin:auto;
+  border:3px solid rgba(255,255,255,.6);
+  box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* ===== SECTION ===== */
+.section{
+  background:rgba(255,255,255,.12);
+  padding:2rem;
+  border-radius:20px;
+  margin-top:2rem;
+  text-align:left;
+}
+.section h2{
+  margin-bottom:1rem;
+  color:#ffeaa7;
+}
+
+/* ===== INFO GRID ===== */
+.info-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1rem;
+}
+
+/* ===== SKILLS ===== */
+.skill-list span{
+  display:inline-block;
+  background:rgba(255,255,255,.25);
+  padding:.4rem .9rem;
+  border-radius:20px;
+  margin:.3rem;
+  font-size:.9rem;
+}
+
+/* ===== CERTIFICATE GRID ===== */
+.cert-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1.5rem;
+}
+.cert-item{
+  background:rgba(255,255,255,.15);
+  padding:1rem;
+  border-radius:16px;
+  cursor:pointer;
+  transition:.3s;
+  text-align:center;
+}
+.cert-item:hover{
+  transform:translateY(-6px);
+  box-shadow:0 15px 30px rgba(0,0,0,.35);
+}
+.cert-item img{
+  width:100%;
+  height:160px;
+  object-fit:contain;
+  background:#fff;
+  padding:.5rem;
+  border-radius:10px;
+}
+.cert-item p{
+  margin-top:.8rem;
+}
+
+/* ===== IMAGE MODAL ===== */
+.image-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+}
+.image-modal img{
+  max-width:90%;
+  max-height:90%;
+  border-radius:12px;
+  box-shadow:0 20px 50px rgba(0,0,0,.6);
+}
+.image-modal span{
+  position:absolute;
+  top:20px;
+  right:30px;
+  font-size:42px;
+  color:#fff;
+  cursor:pointer;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  margin-top:auto;
+  text-align:center;
+  padding:2rem;
+  background:rgba(0,0,0,.25);
+  font-size:14px;
+}
+
+@media(max-width:768px){
+  .info-grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+  <div class="logo">YenNhiBlog</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="profile.html">Profile</a></li>
+  </ul>
+</nav>
+</header>
+
+<div class="container">
+
+<!-- ===== AVATAR ===== -->
+<div class="avatar">
+  <img src="images/avatar.jpg" alt="Avatar">
+</div>
+
+<h1 style="margin-top:1rem;">Phạm Yến Nhi</h1>
+<p>Sinh viên Công nghệ thông tin | Định hướng Java & Web Developer</p>
+
+<!-- ===== THÔNG TIN ===== -->
+<div class="section">
+<h2>📌 Thông tin cá nhân</h2>
+<div class="info-grid">
+  <p><b>Họ tên:</b> Phạm Yến Nhi</p>
+  <p><b>Tuổi:</b> 21</p>
+  <p><b>Ngày sinh:</b> 03/07/2004</p>
+  <p><b>Giới tính:</b> Nữ</p>
+  <p><b>Ngành:</b> Công nghệ thông tin</p>
+  <p><b>Trường:</b> HUTECH</p>
+  <p><b>Email:</b> pynhivvk@gmail.com</p>
+  <p><b>Định hướng:</b> Java / Web Developer</p>
+</div>
+</div>
+
+<!-- ===== GIỚI THIỆU ===== -->
+<div class="section">
+<h2>👋 Giới thiệu</h2>
+<p>
+Mình là sinh viên ngành Công nghệ thông tin, yêu thích lập trình Java và phát triển Web.
+Mình luôn chủ động học hỏi, rèn luyện tư duy logic và xây dựng các dự án cá nhân để
+nâng cao kỹ năng chuyên môn, chuẩn bị cho môi trường làm việc thực tế.
+</p>
+</div>
+
+<!-- ===== KỸ NĂNG ===== -->
+<div class="section">
+<h2>🛠️ Kỹ năng</h2>
+<div class="skill-list">
+  <span>Java Core</span>
+  <span>OOP</span>
+  <span>Java Collections</span>
+  <span>Spring Boot (Cơ bản)</span>
+  <span>HTML5</span>
+  <span>CSS3</span>
+  <span>JavaScript</span>
+  <span>Git & GitHub</span>
+  <span>MySQL (Cơ bản)</span>
+</div>
+</div>
+
+<!-- ===== CHỨNG CHỈ ===== -->
+<div class="section">
+<h2>🏅 Chứng chỉ Cisco</h2>
+
+<div class="cert-grid">
+  <div class="cert-item" onclick="openImage(this)">
+    <img src="images/cisco.jpg">
+    <p>Networking Basics</p>
+  </div>
+
+  <div class="cert-item" onclick="openImage(this)">
+    <img src="images/1.jpg">
+    <p>JavaScript Essentials 1</p>
+  </div>
+
+  <div class="cert-item" onclick="openImage(this)">
+    <img src="images/2.jpg">
+    <p>JavaScript Essentials 2</p>
+  </div>
+</div>
+</div>
+
+
+<!-- ===== MỤC TIÊU ===== -->
+<div class="section">
+<h2>🎯 Mục tiêu nghề nghiệp</h2>
+<p>
+Mình muốn trở thành Java/Web Developer vững nền tảng,
+hướng đến phát triển các hệ thống phần mềm lớn,
+ổn định và có giá trị thực tiễn cho doanh nghiệp.
+</p>
+</div>
+
+
+</div>
+
+<footer>
+© 2025 YenNhiBlog | Profile Sinh viên CNTT
+</footer>
+
+<!-- ===== IMAGE MODAL ===== -->
+<div class="image-modal" id="imageModal" onclick="closeImage()">
+  <span>&times;</span>
+  <img id="modalImg">
+</div>
+
+<script>
+function openImage(el){
+  const imgSrc = el.querySelector("img").src;
+  document.getElementById("modalImg").src = imgSrc;
+  document.getElementById("imageModal").style.display = "flex";
+}
+function closeImage(){
+  document.getElementById("imageModal").style.display = "none";
+}
+</script>
+
+</body>
+</html>

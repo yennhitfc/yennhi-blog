@@ -13,104 +13,21 @@ body{
   background:linear-gradient(135deg,#667eea,#764ba2);
   color:#fff;
 }
-
-/* ===== HEADER ===== */
-header{
-  background:rgba(255,255,255,.12);
-  padding:1.5rem 0;
-}
-nav{
-  max-width:1200px;
-  margin:auto;
-  padding:0 2rem;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-/* ===== MAIN ===== */
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:3rem 2rem;
-}
+header{background:rgba(255,255,255,.12);padding:1.5rem 0}
+nav{max-width:1200px;margin:auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center}
+.container{max-width:1200px;margin:auto;padding:3rem 2rem}
 h1{text-align:center;margin-bottom:3rem}
-
-/* ===== BLOG GRID ===== */
-.blog-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:2rem;
-}
-
-.blog-card{
-  background:rgba(255,255,255,.15);
-  padding:2rem;
-  border-radius:20px;
-  transition:.3s;
-}
-.blog-card:hover{
-  transform:translateY(-6px);
-  background:rgba(255,255,255,.25);
-}
-.blog-card h3{margin-top:.5rem}
-.blog-card p{opacity:.9}
-
-.btn{
-  margin-top:1.5rem;
-  display:inline-block;
-  padding:.6rem 1.6rem;
-  background:#fff;
-  color:#667eea;
-  border-radius:30px;
-  font-weight:600;
-  cursor:pointer;
-}
-
-/* ===== MODAL ===== */
-.modal{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.7);
-  display:none;
-  justify-content:center;
-  align-items:center;
-  z-index:999;
-}
-.modal-content{
-  background:#fff;
-  color:#333;
-  max-width:900px;
-  width:95%;
-  max-height:90vh;
-  overflow-y:auto;
-  padding:3rem;
-  border-radius:20px;
-}
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
+.blog-card{background:rgba(255,255,255,.15);padding:2rem;border-radius:20px;transition:.3s}
+.blog-card:hover{transform:translateY(-6px);background:rgba(255,255,255,.25)}
+.btn{margin-top:1.5rem;display:inline-block;padding:.6rem 1.6rem;background:#fff;color:#667eea;border-radius:30px;font-weight:600;cursor:pointer}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;justify-content:center;align-items:center;z-index:999}
+.modal-content{background:#fff;color:#333;max-width:900px;width:95%;max-height:90vh;overflow-y:auto;padding:3rem;border-radius:20px}
 .modal-content h2{color:#667eea}
 .modal-content p{text-align:justify;line-height:1.8}
-pre{
-  background:#f4f4f4;
-  padding:1rem;
-  border-radius:10px;
-  overflow-x:auto;
-}
-.close{
-  margin-top:2rem;
-  padding:.7rem 2rem;
-  background:#667eea;
-  color:#fff;
-  border-radius:30px;
-  cursor:pointer;
-  display:inline-block;
-}
-
-/* ===== FOOTER ===== */
-footer{
-  text-align:center;
-  padding:2rem;
-  background:rgba(0,0,0,.25);
-}
+pre{background:#f4f4f4;padding:1rem;border-radius:10px;overflow-x:auto}
+.close{margin-top:2rem;padding:.7rem 2rem;background:#667eea;color:#fff;border-radius:30px;cursor:pointer;display:inline-block}
+footer{text-align:center;padding:2rem;background:rgba(0,0,0,.25)}
 </style>
 </head>
 
@@ -126,68 +43,22 @@ footer{
   </nav>
 </header>
 
-
 <div class="container">
 <h1>📘 Blog Lập Trình Java & JavaScript</h1>
 
 <div class="blog-grid">
-  <div class="blog-card">
-    <h3>1. Tổng quan ngôn ngữ lập trình Java</h3>
-    <p>Giới thiệu đầy đủ về Java, lịch sử, đặc điểm, ưu nhược điểm và ứng dụng.</p>
-    <div class="btn" onclick="openPost(1)">Đọc bài viết</div>
-  </div>
-
-  <div class="blog-card">
-    <h3>2. Cú pháp cơ bản và cấu trúc Java</h3>
-    <p>Phân tích chi tiết biến, kiểu dữ liệu, toán tử và luồng điều khiển.</p>
-    <div class="btn" onclick="openPost(2)">Đọc bài viết</div>
-  </div>
-
-  <div class="blog-card">
-    <h3>3. Lập trình hướng đối tượng trong Java</h3>
-    <p>Trình bày OOP: đóng gói, kế thừa, đa hình, trừu tượng.</p>
-    <div class="btn" onclick="openPost(3)">Đọc bài viết</div>
-  </div>
-
-  <div class="blog-card">
-    <h3>4. Giới thiệu JavaScript hiện đại</h3>
-    <p>Vai trò JavaScript trong web, ES6+, ứng dụng thực tế.</p>
-    <div class="btn" onclick="openPost(4)">Đọc bài viết</div>
-  </div>
-
-  <div class="blog-card">
-    <h3>5. Biến và kiểu dữ liệu JavaScript</h3>
-    <p>So sánh var, let, const và kiểu dữ liệu động.</p>
-    <div class="btn" onclick="openPost(5)">Đọc bài viết</div>
-  </div>
-
-  <div class="blog-card">
-    <h3>6. DOM và sự kiện trong JavaScript</h3>
-    <p>Cách JavaScript tương tác HTML/CSS.</p>
-    <div class="btn" onclick="openPost(6)">Đọc bài viết</div>
-  </div>
-
-  <div class="blog-card">
-    <h3>7. Xử lý ngoại lệ trong Java</h3>
-    <p>Try-catch, throws và best practice.</p>
-    <div class="btn" onclick="openPost(7)">Đọc bài viết</div>
-  </div>
-
-  <div class="blog-card">
-    <h3>8. Bất đồng bộ trong JavaScript</h3>
-    <p>Callback, Promise, Async/Await.</p>
-    <div class="btn" onclick="openPost(8)">Đọc bài viết</div>
-  </div>
-
-  <div class="blog-card">
-    <h3>9. Kết hợp Java & JavaScript trong Web</h3>
-    <p>Mô hình Frontend – Backend.</p>
-    <div class="btn" onclick="openPost(9)">Đọc bài viết</div>
-  </div>
+  <div class="blog-card"><h3>1. Tổng quan Java</h3><div class="btn" onclick="openPost(1)">Đọc bài viết</div></div>
+  <div class="blog-card"><h3>2. Cú pháp & cấu trúc Java</h3><div class="btn" onclick="openPost(2)">Đọc bài viết</div></div>
+  <div class="blog-card"><h3>3. OOP trong Java</h3><div class="btn" onclick="openPost(3)">Đọc bài viết</div></div>
+  <div class="blog-card"><h3>4. JavaScript hiện đại</h3><div class="btn" onclick="openPost(4)">Đọc bài viết</div></div>
+  <div class="blog-card"><h3>5. Biến & kiểu dữ liệu JS</h3><div class="btn" onclick="openPost(5)">Đọc bài viết</div></div>
+  <div class="blog-card"><h3>6. DOM & sự kiện</h3><div class="btn" onclick="openPost(6)">Đọc bài viết</div></div>
+  <div class="blog-card"><h3>7. Xử lý ngoại lệ Java</h3><div class="btn" onclick="openPost(7)">Đọc bài viết</div></div>
+  <div class="blog-card"><h3>8. Bất đồng bộ JS</h3><div class="btn" onclick="openPost(8)">Đọc bài viết</div></div>
+  <div class="blog-card"><h3>9. Java & JS trong Web</h3><div class="btn" onclick="openPost(9)">Đọc bài viết</div></div>
 </div>
 </div>
 
-<!-- MODAL -->
 <div class="modal" id="modal" onclick="closePost()">
   <div class="modal-content" onclick="event.stopPropagation()">
     <h2 id="title"></h2>
@@ -198,14 +69,20 @@ footer{
 
 <script>
 const posts={
-1:{
-title:"Bài 1: Tổng quan ngôn ngữ lập trình Java",
+  1:{
+title:"Bài 1: Ngôn ngữ lập trình Java – Nền tảng bền vững trong phát triển phần mềm",
 content:`
-<p>Java là ngôn ngữ lập trình bậc cao, hướng đối tượng, được phát triển bởi Sun Microsystems vào năm 1995. Java ra đời với mục tiêu xây dựng các ứng dụng có khả năng chạy trên nhiều nền tảng khác nhau mà không cần thay đổi mã nguồn.</p>
+<p><strong>Java</strong> là một trong những ngôn ngữ lập trình phổ biến và có ảnh hưởng lớn nhất trong lĩnh vực công nghệ thông tin hiện nay. Java được phát triển bởi Sun Microsystems (nay thuộc Oracle) và chính thức ra mắt vào năm 1995. Ngay từ khi ra đời, Java đã hướng tới mục tiêu xây dựng các ứng dụng ổn định, bảo mật, dễ mở rộng và đặc biệt là có khả năng chạy trên nhiều nền tảng khác nhau.</p>
 
-<p>Đặc điểm nổi bật nhất của Java là triết lý “Write Once, Run Anywhere”. Nhờ cơ chế biên dịch sang bytecode và chạy trên Java Virtual Machine (JVM), chương trình Java có thể hoạt động trên Windows, Linux hay macOS.</p>
+<p>Một trong những triết lý nổi tiếng nhất của Java là <strong>“Write Once, Run Anywhere”</strong>, nghĩa là lập trình viên chỉ cần viết mã nguồn một lần nhưng có thể chạy trên nhiều hệ điều hành khác nhau như Windows, Linux hay macOS. Điều này đạt được nhờ cơ chế biên dịch sang <em>bytecode</em> và thực thi thông qua <strong>Java Virtual Machine (JVM)</strong>.</p>
 
-<p>Java có hệ sinh thái rất lớn, được sử dụng rộng rãi trong các hệ thống ngân hàng, doanh nghiệp, ứng dụng Android và các hệ thống backend quy mô lớn.</p>
+<p>Java là ngôn ngữ lập trình <strong>hướng đối tượng</strong> hoàn toàn, hỗ trợ đầy đủ bốn đặc tính cơ bản: đóng gói, kế thừa, đa hình và trừu tượng. Nhờ đó, Java giúp lập trình viên xây dựng các hệ thống phần mềm có cấu trúc rõ ràng, dễ bảo trì và nâng cấp trong tương lai.</p>
+
+<p>Một ưu điểm nổi bật khác của Java là <strong>tính bảo mật cao</strong>. Java không cho phép thao tác con trỏ trực tiếp, đồng thời JVM kiểm soát chặt chẽ việc truy cập bộ nhớ và tài nguyên hệ thống. Điều này giúp hạn chế các lỗi nghiêm trọng và tăng độ an toàn cho chương trình, đặc biệt trong môi trường mạng.</p>
+
+<p>Java còn cung cấp cơ chế <strong>quản lý bộ nhớ tự động</strong> thông qua Garbage Collection. Lập trình viên không cần giải phóng bộ nhớ thủ công, từ đó giảm nguy cơ rò rỉ bộ nhớ và lỗi chương trình.</p>
+
+<p>Hiện nay, Java được ứng dụng rộng rãi trong nhiều lĩnh vực như: phát triển hệ thống doanh nghiệp, ngân hàng, thương mại điện tử, ứng dụng Android, backend web và các hệ thống xử lý dữ liệu lớn. Các framework nổi tiếng như Spring, Spring Boot, Hibernate đã góp phần làm cho Java trở thành lựa chọn hàng đầu trong phát triển phần mềm hiện đại.</p>
 
 <pre><code>public class HelloWorld {
   public static void main(String[] args) {
@@ -213,89 +90,73 @@ content:`
   }
 }</code></pre>
 
-<p>Với tính ổn định, bảo mật cao và cộng đồng lớn, Java vẫn giữ vai trò quan trọng trong ngành CNTT hiện nay.</p>
+<p>Đối với sinh viên Công nghệ Thông tin, Java không chỉ là một môn học mà còn là nền tảng giúp rèn luyện tư duy lập trình chuyên nghiệp. Việc nắm vững Java sẽ tạo tiền đề vững chắc để tiếp cận các công nghệ mới và đáp ứng yêu cầu của thị trường lao động trong tương lai.</p>
+
+<p><strong>Kết luận:</strong> Với tính ổn định, bảo mật cao và khả năng ứng dụng rộng rãi, Java xứng đáng là một trong những ngôn ngữ lập trình quan trọng và bền vững nhất trong ngành công nghệ thông tin.</p>
 `
 },
-
-2:{
-title:"Bài 2: Cú pháp cơ bản và cấu trúc Java",
-content:`
-<p>Java có cú pháp rõ ràng, chặt chẽ. Mỗi chương trình Java đều bắt đầu bằng một lớp (class) và hàm main.</p>
-
-<p>Java hỗ trợ nhiều kiểu dữ liệu như int, double, boolean, char và String. Ngoài ra còn có mảng và đối tượng.</p>
-
+2:{title:"Bài 2: Cú pháp cơ bản và cấu trúc chương trình Java",content:`
+<p>Một chương trình Java có cấu trúc rõ ràng và chặt chẽ. Mọi chương trình đều bắt đầu bằng việc khai báo lớp (class) và phương thức main – điểm khởi đầu khi chương trình được thực thi.</p>
+<p>Java hỗ trợ nhiều kiểu dữ liệu nguyên thủy như int, double, boolean, char, cùng với kiểu String và các kiểu đối tượng.</p>
 <pre><code>int age = 20;
 double score = 8.5;
 boolean passed = true;</code></pre>
-
-<p>Java sử dụng các cấu trúc điều khiển như if-else, switch, for, while để kiểm soát luồng chương trình.</p>
-`
-},
-
-3:{
-title:"Bài 3: Lập trình hướng đối tượng trong Java",
-content:`
-<p>Lập trình hướng đối tượng (OOP) là nền tảng của Java. OOP giúp chương trình dễ mở rộng và bảo trì.</p>
-
-<p>Bốn tính chất chính gồm: Đóng gói, Kế thừa, Đa hình và Trừu tượng.</p>
-
+<p>Java sử dụng các cấu trúc điều khiển như if-else, switch, for, while để kiểm soát luồng thực thi. Nhờ cú pháp chặt chẽ, Java giúp giảm lỗi và tăng tính ổn định của chương trình.</p>
+`},
+3:{title:"Bài 3: Lập trình hướng đối tượng trong Java",content:`
+<p>Lập trình hướng đối tượng (OOP) là nền tảng cốt lõi của Java. OOP giúp mô phỏng các đối tượng trong thế giới thực vào chương trình.</p>
+<p>Bốn tính chất chính gồm: Đóng gói (Encapsulation), Kế thừa (Inheritance), Đa hình (Polymorphism) và Trừu tượng (Abstraction).</p>
 <pre><code>class Student {
   String name;
   void study() {
     System.out.println("Sinh viên đang học");
   }
 }</code></pre>
-
-<p>OOP giúp mô phỏng thế giới thực vào phần mềm.</p>
-`
-},
-
-4:{
-title:"Bài 4: Giới thiệu JavaScript hiện đại",
-content:`
-<p>JavaScript là ngôn ngữ lập trình phía client, giúp website tương tác và động.</p>
-
-<p>Ngày nay JavaScript không chỉ chạy trên trình duyệt mà còn chạy backend với Node.js.</p>
-`
-},
-
-5:{
-title:"Bài 5: Biến và kiểu dữ liệu JavaScript",
-content:`
-<p>JavaScript có kiểu dữ liệu động. Biến được khai báo bằng var, let hoặc const.</p>
-
+<p>Nhờ OOP, chương trình Java dễ mở rộng, dễ bảo trì và tái sử dụng mã nguồn.</p>
+`},
+4:{title:"Bài 4: Giới thiệu JavaScript hiện đại",content:`
+<p>JavaScript là ngôn ngữ lập trình chính của web, giúp trang web trở nên động và tương tác.</p>
+<p>Ngày nay, JavaScript không chỉ chạy trên trình duyệt mà còn được sử dụng ở backend thông qua Node.js.</p>
+<p>Chuẩn ES6+ đã mang lại nhiều tính năng mạnh mẽ như arrow function, module, destructuring, giúp code ngắn gọn và dễ đọc.</p>
+`},
+5:{title:"Bài 5: Biến và kiểu dữ liệu trong JavaScript",content:`
+<p>JavaScript là ngôn ngữ kiểu động, nghĩa là kiểu dữ liệu được xác định trong quá trình chạy.</p>
+<p>Biến được khai báo bằng var, let hoặc const. Trong đó let và const được khuyến khích sử dụng.</p>
 <pre><code>let name = "An";
 const age = 20;</code></pre>
-`
-},
-
-6:{
-title:"Bài 6: DOM và sự kiện trong JavaScript",
-content:`
-<p>DOM cho phép JavaScript thao tác trực tiếp HTML.</p>
-`
-},
-
-7:{
-title:"Bài 7: Xử lý ngoại lệ trong Java",
-content:`
-<p>Exception giúp chương trình không bị dừng đột ngột.</p>
-`
-},
-
-8:{
-title:"Bài 8: Bất đồng bộ trong JavaScript",
-content:`
-<p>Async/Await giúp code dễ đọc hơn so với callback.</p>
-`
-},
-
-9:{
-title:"Bài 9: Kết hợp Java & JavaScript trong Web",
-content:`
-<p>Java xử lý backend, JavaScript xử lý frontend tạo nên hệ thống web hoàn chỉnh.</p>
-`
-}
+<p>JavaScript hỗ trợ nhiều kiểu dữ liệu như Number, String, Boolean, Object, Array.</p>
+`},
+6:{title:"Bài 6: DOM và xử lý sự kiện trong JavaScript",content:`
+<p>DOM (Document Object Model) cho phép JavaScript truy cập và thay đổi nội dung HTML.</p>
+<p>Thông qua DOM, JavaScript có thể lắng nghe và xử lý các sự kiện như click, submit, hover.</p>
+<pre><code>document.getElementById("btn").onclick = function(){
+  alert("Xin chào");
+}</code></pre>
+<p>DOM là cầu nối giữa JavaScript và giao diện người dùng.</p>
+`},
+7:{title:"Bài 7: Xử lý ngoại lệ trong Java",content:`
+<p>Ngoại lệ (Exception) là các lỗi xảy ra trong quá trình chạy chương trình.</p>
+<p>Java sử dụng try-catch để bắt và xử lý ngoại lệ, giúp chương trình không bị dừng đột ngột.</p>
+<pre><code>try {
+  int a = 10/0;
+} catch(Exception e) {
+  System.out.println("Lỗi chia cho 0");
+}</code></pre>
+<p>Xử lý ngoại lệ giúp chương trình an toàn và ổn định hơn.</p>
+`},
+8:{title:"Bài 8: Lập trình bất đồng bộ trong JavaScript",content:`
+<p>JavaScript hoạt động theo mô hình bất đồng bộ, giúp xử lý các tác vụ mất thời gian.</p>
+<p>Promise và async/await giúp code rõ ràng, tránh callback hell.</p>
+<pre><code>async function loadData(){
+  const res = await fetch(url);
+}</code></pre>
+<p>Bất đồng bộ giúp cải thiện hiệu suất và trải nghiệm người dùng.</p>
+`},
+9:{title:"Bài 9: Kết hợp Java và JavaScript trong phát triển Web",content:`
+<p>Trong ứng dụng web hiện đại, Java thường đảm nhiệm vai trò backend, xử lý logic và dữ liệu.</p>
+<p>JavaScript đảm nhiệm frontend, tương tác với người dùng.</p>
+<p>Sự kết hợp này tạo nên mô hình Frontend – Backend hoàn chỉnh, được sử dụng rộng rãi trong thực tế.</p>
+`}
 };
 
 function openPost(id){

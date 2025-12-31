@@ -24,15 +24,15 @@ body{
 }
 .bg-animation span{
   position:absolute;
-  width:20px;height:20px;
-  background:rgba(255,255,255,.12);
+  width:18px;height:18px;
+  background:rgba(255,255,255,.15);
   border-radius:50%;
   animation:float 25s infinite
 }
 .bg-animation span:nth-child(1){left:10%}
-.bg-animation span:nth-child(2){left:30%;animation-delay:4s}
-.bg-animation span:nth-child(3){left:50%;animation-delay:8s}
-.bg-animation span:nth-child(4){left:70%;animation-delay:12s}
+.bg-animation span:nth-child(2){left:30%;animation-delay:5s}
+.bg-animation span:nth-child(3){left:55%;animation-delay:10s}
+.bg-animation span:nth-child(4){left:75%;animation-delay:15s}
 
 @keyframes float{
   0%{transform:translateY(100vh) scale(0);opacity:0}
@@ -42,9 +42,9 @@ body{
 
 /* ===== HEADER ===== */
 header{
-  background:rgba(255,255,255,.1);
-  backdrop-filter:blur(10px);
-  padding:1.5rem 0;
+  background:rgba(255,255,255,.12);
+  backdrop-filter:blur(12px);
+  padding:1.2rem 0;
   position:sticky;top:0;z-index:10
 }
 nav{
@@ -54,7 +54,7 @@ nav{
 }
 .logo{
   font-size:1.8rem;font-weight:bold;
-  background:linear-gradient(45deg,#fff,#f093fb);
+  background:linear-gradient(45deg,#fff,#fbc2eb);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent
 }
@@ -63,81 +63,150 @@ nav{
   color:#fff;text-decoration:none;position:relative
 }
 .nav-links a::after{
-  content:'';position:absolute;left:0;bottom:-5px;
+  content:'';position:absolute;left:0;bottom:-6px;
   width:0;height:2px;background:#fff;transition:.3s
 }
 .nav-links a:hover::after{width:100%}
 
 /* ===== HERO ===== */
 .hero{
-  max-width:1200px;margin:auto;
-  padding:6rem 2rem;text-align:center
+  max-width:1200px;
+  margin:auto;
+  padding:6rem 2rem 5rem;
+  text-align:center
 }
-.hero h1{font-size:3.8rem;margin-bottom:1rem}
-.hero p{font-size:1.4rem;opacity:.9;margin-bottom:3rem}
+.hero h1{
+  font-size:3.6rem;
+  margin-bottom:1rem
+}
 
-.cta{display:flex;justify-content:center;gap:1.5rem}
+/* ===== SLOGAN ===== */
+.slogan{
+  font-size:2.1rem;
+  font-weight:800;
+  margin:1.4rem auto 1.8rem;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+  background:linear-gradient(90deg,#fff,#ffd6f5,#fff);
+  background-size:200% auto;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:0 0 15px rgba(255,255,255,.45);
+  white-space:nowrap;
+  overflow:hidden;
+  border-right:3px solid rgba(255,255,255,.7);
+  width:0;
+}
+.slogan.typing{
+  animation:
+    typing 3.5s steps(45,end) forwards,
+    blink .75s step-end infinite,
+    gradientMove 4s linear infinite;
+}
+
+@keyframes typing{from{width:0}to{width:100%}}
+@keyframes blink{50%{border-color:transparent}}
+@keyframes gradientMove{to{background-position:200% center}}
+
+.hero p.desc{
+  font-size:1.25rem;
+  opacity:.9;
+  margin-bottom:3rem
+}
+
+/* ===== BUTTON ===== */
+.cta{
+  display:flex;
+  justify-content:center;
+  gap:1.5rem
+}
 .btn{
-  padding:1rem 2.5rem;border-radius:50px;
-  font-weight:600;text-decoration:none;transition:.3s
+  padding:1rem 2.5rem;
+  border-radius:50px;
+  font-weight:600;
+  text-decoration:none;
+  transition:.3s
 }
-.btn-primary{background:#fff;color:#667eea}
-.btn-primary:hover{transform:translateY(-4px)}
-.btn-secondary{border:2px solid rgba(255,255,255,.4);color:#fff}
+.btn-primary{
+  background:#fff;
+  color:#667eea
+}
+.btn-primary:hover{transform:translateY(-5px)}
+.btn-secondary{
+  border:2px solid rgba(255,255,255,.5);
+  color:#fff
+}
 
-/* ===== SECTIONS ===== */
+/* ===== SECTION ===== */
 .section{
-  max-width:1200px;margin:auto;
-  padding:4rem 2rem;text-align:center
+  max-width:1200px;
+  margin:auto;
+  padding:4.5rem 2rem;
+  text-align:center
 }
 .section h2{
-  font-size:2.4rem;margin-bottom:2rem
+  font-size:2.5rem;
+  margin-bottom:1rem
+}
+.section .desc{
+  max-width:720px;
+  margin:0 auto 3rem;
+  opacity:.9
 }
 
 /* ===== FEATURES ===== */
 .features{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:2rem
 }
 .feature{
-  background:rgba(255,255,255,.12);
-  padding:2rem;border-radius:20px;
+  background:rgba(255,255,255,.15);
+  padding:2.5rem;
+  border-radius:22px;
   transition:.3s
 }
 .feature:hover{
   transform:translateY(-8px);
-  background:rgba(255,255,255,.2)
+  background:rgba(255,255,255,.25)
 }
-.feature h3{margin-bottom:1rem}
 
-/* ===== TOPICS ===== */
-.topics{
+/* ===== STATS ===== */
+.stats{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:2rem
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:2rem;
+  margin-top:3rem
 }
-.topic{
-  background:rgba(255,255,255,.12);
-  padding:2rem;border-radius:20px;
-  text-align:left;transition:.3s
+.stat{
+  background:rgba(255,255,255,.18);
+  padding:2.5rem 1.5rem;
+  border-radius:22px
 }
-.topic:hover{transform:scale(1.03)}
-.topic span{font-size:2rem}
+.stat h3{
+  font-size:2.8rem;
+  margin-bottom:.6rem
+}
+
+/* ===== CTA FINAL ===== */
+.cta-final{
+  text-align:center;
+  padding:5rem 2rem;
+  background:rgba(0,0,0,.25)
+}
 
 /* ===== FOOTER ===== */
 footer{
-  margin-top:auto;
   text-align:center;
   padding:2rem;
-  background:rgba(0,0,0,.25);
-  backdrop-filter:blur(6px);
+  background:rgba(0,0,0,.3);
   font-size:14px
 }
 
 @media(max-width:768px){
   .hero h1{font-size:2.4rem}
-  .hero p{font-size:1.1rem}
+  .slogan{font-size:1.35rem}
+  .hero p.desc{font-size:1.1rem}
   .cta{flex-direction:column}
 }
 </style>
@@ -161,56 +230,60 @@ footer{
 </header>
 
 <section class="hero">
-<h1>👋 Welcome to YenNhiBlog</h1>
-<p>Nơi chia sẻ kiến thức Java & JavaScript cho sinh viên CNTT</p>
-<div class="cta">
-  <a href="blog.html" class="btn btn-primary">Khám phá Blog</a>
-  <a href="profile.html" class="btn btn-secondary">Về mình</a>
-</div>
+  <h1>👋 Welcome to YenNhiBlog</h1>
+  <p id="slogan" class="slogan">HỌC LẬP TRÌNH BÀI BẢN – HIỂU SÂU TỪNG DÒNG CODE</p>
+  <p class="desc">Nơi chia sẻ kiến thức Java & JavaScript dành cho sinh viên CNTT</p>
+
+  <div class="cta">
+    <a href="blog.html" class="btn btn-primary">Khám phá Blog</a>
+    <a href="profile.html" class="btn btn-secondary">Về mình</a>
+  </div>
 </section>
 
 <section class="section">
-<h2>✨ Bạn sẽ học được gì?</h2>
-<div class="features">
-  <div class="feature">
-    <h3>☕ Java Core</h3>
-    <p>Nắm vững OOP, Collection, Exception, Multithreading.</p>
+  <h2>✨ Bạn sẽ học được gì?</h2>
+  <p class="desc">Nội dung được xây dựng từ cơ bản đến nâng cao, phù hợp sinh viên CNTT.</p>
+
+  <div class="features">
+    <div class="feature">
+      <h3>☕ Java Core</h3>
+      <p>OOP, Collection, Exception, Multithreading.</p>
+    </div>
+    <div class="feature">
+      <h3>🌐 JavaScript</h3>
+      <p>DOM, ES6+, Async/Await.</p>
+    </div>
+    <div class="feature">
+      <h3>🚀 Tư duy lập trình</h3>
+      <p>Học chắc – hiểu sâu – áp dụng được.</p>
+    </div>
   </div>
-  <div class="feature">
-    <h3>🌐 JavaScript</h3>
-    <p>DOM, Async/Await, ES6+, lập trình web hiện đại.</p>
-  </div>
-  <div class="feature">
-    <h3>🚀 Tư duy lập trình</h3>
-    <p>Giải thích dễ hiểu, phù hợp sinh viên mới học.</p>
-  </div>
-</div>
 </section>
 
 <section class="section">
-<h2>📚 Chủ đề nổi bật</h2>
-<div class="topics">
-  <div class="topic">
-    <span>☕</span>
-    <h3>Java Backend</h3>
-    <p>Java Core, OOP, Spring Boot, REST API.</p>
+  <h2>📊 Thống kê Blog</h2>
+  <div class="stats">
+    <div class="stat"><h3>9+</h3><p>Bài viết học tập</p></div>
+    <div class="stat"><h3>2</h3><p>Ngôn ngữ chính</p></div>
+    <div class="stat"><h3>100%</h3><p>Phục vụ sinh viên</p></div>
   </div>
-  <div class="topic">
-    <span>⚡</span>
-    <h3>JavaScript Web</h3>
-    <p>Xây dựng website tương tác, logic frontend.</p>
-  </div>
-  <div class="topic">
-    <span>🧠</span>
-    <h3>Kiến thức nền tảng</h3>
-    <p>Giúp sinh viên học chắc – hiểu sâu.</p>
-  </div>
-</div>
+</section>
+
+<section class="cta-final">
+  <h2>🎯 Bắt đầu học lập trình ngay hôm nay</h2>
+  <p style="margin:1.5rem 0">Truy cập Blog để xem các bài viết chi tiết</p>
+  <a href="blog.html" class="btn btn-primary">Vào Blog</a>
 </section>
 
 <footer>
-<p>© 2025 YenNhiBlog | HTML • CSS • JavaScript</p>
+  <p>© 2025 YenNhiBlog | HTML • CSS • JavaScript</p>
 </footer>
+
+<script>
+window.onload = () => {
+  document.getElementById("slogan").classList.add("typing");
+};
+</script>
 
 </body>
 </html>
